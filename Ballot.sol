@@ -155,4 +155,12 @@ contract Ballot {
     {
         winnerName_ = proposals[winningProposal()].name;
     }
+
+    function depTime() view public returns (uint) {
+        return startTime;
+    }
+
+    function curTime() view public returns (uint) {
+        return block.timestamp;
+    }
 }
